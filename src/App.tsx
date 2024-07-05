@@ -3,9 +3,10 @@ import './App.css'
 import { jupiterHour, jupiterQuarter } from './modules/jupiter'
 
 function App() {
-  const [lune, setLune] = useState(1)
-  const [terre, setTerre] = useState(1)
-  const [soleil, setSoleil] = useState(1)
+  type CadranValue = 1 | 2;
+  const [lune, setLune] = useState<CadranValue>(1);
+  const [terre, setTerre] = useState<CadranValue>(1);
+  const [soleil, setSoleil] = useState<CadranValue>(1);
   const [showResult, setShowResult] = useState(false)
 
   const handleChangeValue = (type: string, e: ChangeEvent<HTMLInputElement>) => {
